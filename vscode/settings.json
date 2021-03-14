@@ -1,59 +1,67 @@
 {
-    "window.zoomLevel": 1,
-    "workbench.iconTheme": "material-icon-theme",
-    "better-comments.tags": [
-        {
-            "tag": "!",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
+    // Fira Code
+	"editor.fontFamily": "Fira Code",
+	"editor.fontWeight": "500",
+	"explorer.confirmDelete": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "One Dark Pro",
+	"better-comments.tags": [
+		{
+			"tag": "!",
+			"color": "#FF2D00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "?",
+			"color": "#3498DB",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "//",
+			"color": "#474747",
+			"strikethrough": true,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "todo",
+			"color": "#FF8C00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "*",
+			"color": "#98C379",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		}
+	],
+	"editor.tokenColorCustomizations": {
+        "[One Dark Pro]": {
+            "comments": "#57a5a5",
+            "strings": "#72f89a",
+            "functions": "#03f3d3",
+            "numbers": "#ffffff",
         },
-        {
-            "tag": "?",
-            "color": "#3498DB",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "//",
-            "color": "#78c4cd",
-            "strikethrough": true,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "todo",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "*",
-            "color": "#98C379",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": " ",
-            "color": "#78c4cd",
-            "strikethrough": false,
-            "backgroundColor": "transparent",
-        }
-    ],
-    "winopacity.opacity": 200,
-    "workbench.colorTheme": "One Dark Pro"
+    },
+    "workbench.colorCustomizations": {
+        // 选中高亮的颜色
+        "editor.selectionBackground": "#3b5e88",
+    },
 }

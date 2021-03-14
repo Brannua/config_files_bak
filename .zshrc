@@ -1,24 +1,27 @@
-# 此处只展示修改和添加的配置信息，默认生成的配置信息除外
+export ZSH="/home/lpj/.oh-my-zsh"
 
-## win & wsl_ubuntu
-ZSH_THEME="robbyrussell"
+ZSH_THEME="murilasso"
 
-## manjaro
-ZSH_THEME="agnoster"
-
-## 需要安装 autojump
 plugins=(colored-man-pages command-not-found extract autojump)
 
-## alias
 alias x="extract"
 alias mv="mv -i"
+alias c="clear"
+alias s="screenfetch"
+alias q="exit"
 alias cls="clear"
-alias ll="ls -al"
 
-## wsl_ubuntu
-alias updateSystem="sudo apt update && sudo apt upgrade -y && sudo apt autoremove"
+# apps alias
+alias wechat="(nohup /opt/apps/com.qq.weixin.deepin/files/run.sh &)"
+alias music="(nohup qqmusic %U &)"
+alias netdisk="(nohup /usr/lib/baidunetdisk/baidunetdisk --no-sandbox %U &)"
+alias chrome="(nohup /usr/bin/google-chrome-stable %U &)"
+alias scr="(nohup simplescreenrecorder --logfile &)"
+alias hello="(nohup /usr/bin/manjaro-hello &)"
+alias sysinfo="(nohup kinfocenter &)"
 
-## nvm
+source $ZSH/oh-my-zsh.sh
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
