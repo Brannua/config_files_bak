@@ -1,15 +1,12 @@
-
-" 让 Vim 在每次启动的时候都检测一下 vim-plug 有没有被安装; 如果没有的话, Vim 会尝试安装 vim-plug, 并自动运行 :PlugInstall
+" 让 Vim 在每次启动的时候都检测一下 vim-plug 有没有被安装; 如果没有的话, Vim 会尝试安装 vim-plug, 并自动运行 :PlugInstall
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 
-" 配置代码高亮
-syntax on
-
-" 配置颜色主题，主题目录: /usr/share/vim/vim82/colors/
+" vim 自带颜色主题目录: /usr/share/vim/vim82/colors/
+syntax enable
 colorscheme murphy
 
 " 让光标所在行出现高亮下划线
@@ -17,6 +14,7 @@ set cursorline
 
 " 代码显示行号
 set number
+set relativenumber
 
 " 配置代码缩进
 set tabstop=4       " 一个tab占4个字符
@@ -31,27 +29,31 @@ set wrap
 set wildmenu
 
 " 自定义快捷键
-map <C-h> :help<CR>
-map <C-s> :w<CR>
-map <C-r> :source ~/.vimrc<CR>
+map <C-w> :w<CR>
 map <C-q> :q<CR>
+map <C-r> :source ~/.vimrc<CR>
 map <C-p> :MarkdownPreview<CR>
+map <C-u> gcc
 
 " faster navigation
 noremap j 5j
 noremap k 5k
-
 
 " vim-plug 管理的插件列表
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'tpope/vim-commentary'
 
 call plug#end()
+
+set scrolloff=6
+
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 
 " set nobackup      表示不需要备份文件
 " set noswapfile    表示不创建临时交换文件
 " set nowritebackup 表示编辑的时候不需要备份文件
 " set noundofile    表示不创建撤销文件
-
