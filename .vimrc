@@ -28,6 +28,8 @@ set wrap
 " 配置类似于 autosuggestion 的功能
 set wildmenu
 
+set scrolloff=6
+
 " 自定义快捷键
 map <C-w> :w<CR>
 map <C-q> :q<CR>
@@ -47,11 +49,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'tpope/vim-commentary'
 
 call plug#end()
-
-set scrolloff=6
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
 
 " set nobackup      表示不需要备份文件
 " set noswapfile    表示不创建临时交换文件
