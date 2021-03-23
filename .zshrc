@@ -37,3 +37,6 @@ alias fy="t"
 alias fanyi="t"
 export YOUDAO_APP_ID=<自行获取有道智云的 id>
 export YOUDAO_APP_KEY=<自行获取有道智云的 key>
+
+# 连续按两下ESC键，即可快速将sudo添加到命令最前端
+bindkey -s '\e\e' '\C-asudo \C-e'
