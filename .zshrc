@@ -6,17 +6,35 @@ ZSH_THEME="ys"
 # zsh_plugins
 plugins=(colored-man-pages command-not-found extract autojump zsh-autosuggestions)
 
+# 连续按两下ESC键，即可快速将sudo添加到命令最前端
+bindkey -s '\e\e' '\C-asudo \C-e'
+
 # global_alias
 alias q="exit"
-alias find="fzf"
+alias c="clear"
+alias fd="fzf"
 alias mv="mv -i"
 alias x="extract"
-alias cls="clear"
 alias s="screenfetch"
-alias open_vimrc="vim ~/.vimrc"
-alias open_zshrc="vim ~/.zshrc"
-alias reload_zshrc="source ~/.zshrc"
-alias reload_vimrc="source ~/.vimrc"
+
+# tsc/youdao-cli-translator
+alias f="t"
+alias F="t"
+export YOUDAO_APP_ID=有道智云自行获取
+export YOUDAO_APP_KEY=有道智云自行获取
+
+# poweroff
+alias p="shutdown -h now"
+# restart
+alias r="reboot"
+# update system
+alias us="yay -Syyu"
+
+# open & reload
+alias ovr="vim ~/.vimrc"
+alias ozr="vim ~/.zshrc"
+alias rzr="source ~/.zshrc"
+alias rvr="source ~/.vimrc"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,12 +49,3 @@ export GOPATH="/home/lpj/go_project"         # go 的工作区
 export GOROOT="/usr/local/go"                # go 的安装路径
 export GOBIN="/home/lpj/go_bin"              # go 存放可执行文件的路径
 export PATH=$PATH:$GOROOT/bin:$GOBIN         # 方便使用 go 的命令和可执行文件
-
-# tsc/youdao-cli-translator
-alias fy="t"
-alias fanyi="t"
-export YOUDAO_APP_ID=<自行获取有道智云的 id>
-export YOUDAO_APP_KEY=<自行获取有道智云的 key>
-
-# 连续按两下ESC键，即可快速将sudo添加到命令最前端
-bindkey -s '\e\e' '\C-asudo \C-e'
