@@ -5,6 +5,7 @@
 	"explorer.confirmDelete": false,
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.colorTheme": "One Dark Pro",
+    "window.zoomLevel": 1,
 	"better-comments.tags": [
 		{
 			"tag": "!",
