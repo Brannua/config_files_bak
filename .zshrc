@@ -1,3 +1,6 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/lpj/.oh-my-zsh"
 
@@ -20,17 +23,18 @@ source $ZSH/oh-my-zsh.sh
 # global_alias
 alias q="exit"
 alias c="clear"
-alias l="ls -l"
+alias l="ls -lh"
 alias fd="fzf"
 alias mv="mv -i"
 alias x="extract"
 alias cls="clear"
 alias s="screenfetch"
+alias gitk="gitkraken ./"
 
 # tsq/youdao-cli-translator
 alias fy="t"
-export YOUDAO_APP_ID=有道智云自行获取
-export YOUDAO_APP_KEY=有道智云自行获取
+export YOUDAO_APP_ID=685537b845c86879
+export YOUDAO_APP_KEY=UcKsjo1Fnmta7EEGpHT6QZKLbnLNYoyj
 
 alias r="reboot"
 alias us="yay -Syyu"
@@ -42,8 +46,3 @@ alias ozr="vim ~/.zshrc"
 alias rzr="source ~/.zshrc"
 alias rvr="source ~/.vimrc"
 
-# nvm_nodejs
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node

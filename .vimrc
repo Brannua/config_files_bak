@@ -44,9 +44,9 @@ noremap k 5k
 " vim-plug 管理的插件列表
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'tpope/vim-commentary'
+" Plug 'vim-airline/vim-airline'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Plug 'tpope/vim-commentary'
 
 call plug#end()
 
